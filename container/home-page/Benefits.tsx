@@ -75,17 +75,17 @@ export default function Benefits() {
 	return (
 		<section id="benefits" className="w-full padding-y bg-background relative z-20">
 			<div className="padding-x">
-				<div className="w-full mb-[60px] sm:mb-[40px] xm:mb-[40px] text-center">
-					<h2 className="sub-heading font-semibold font-FoundersGrotesk text-secondry mb-[20px]">
+				<div className="w-full mb-[60px] sm:mb-[40px] xm:mb-[30px] text-center">
+					<h2 className="sub-heading font-semibold font-FoundersGrotesk text-secondry mb-[20px] sm:mb-[15px] xm:mb-[12px]">
 						Why Choose Life Coaching?
 					</h2>
-					<p className="paragraph font-NeueMontreal text-secondry opacity-70 max-w-[600px] mx-auto">
+					<p className="paragraph font-NeueMontreal text-secondry opacity-70 max-w-[600px] mx-auto sm:text-base xm:text-sm">
 						Experience the transformative benefits that have helped hundreds of clients create lasting positive
 						change in their lives.
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] max-w-7xl mx-auto">
+				<div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xm:grid-cols-1 gap-[30px] lg:gap-[25px] md:gap-[20px] sm:gap-[18px] xm:gap-[16px] max-w-7xl mx-auto">
 					{benefits.map((benefit, index) => (
 						<motion.div
 							key={benefit.id}
@@ -93,15 +93,15 @@ export default function Benefits() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
-							className="bg-white border border-[#21212110] rounded-[20px] p-[30px] hover:border-secondry/50 hover:shadow-lg transition-all duration-300 group"
+							className="bg-white border border-[#21212110] rounded-[20px] p-[30px] sm:p-[25px] xm:p-[20px] hover:border-secondry/50 hover:shadow-lg transition-all duration-300 group"
 						>
-							<div className="w-[60px] h-[60px] flex items-center justify-center bg-secondry/10 rounded-[15px] mb-[20px] text-secondry group-hover:bg-secondry group-hover:text-background transition-all duration-300">
+							<div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] xm:w-[50px] xm:h-[50px] flex items-center justify-center bg-secondry/10 rounded-[15px] mb-[20px] sm:mb-[15px] xm:mb-[15px] text-secondry group-hover:bg-secondry group-hover:text-background transition-all duration-300">
 								{benefit.icon}
 							</div>
-							<h3 className="text-xl font-semibold font-FoundersGrotesk text-secondry mb-[12px]">
+							<h3 className="text-xl sm:text-lg xm:text-base font-semibold font-FoundersGrotesk text-secondry mb-[12px] sm:mb-[10px] xm:mb-[8px]">
 								{benefit.title}
 							</h3>
-							<p className="text-base font-NeueMontreal text-secondry/70 leading-relaxed">
+							<p className="text-base sm:text-sm xm:text-sm font-NeueMontreal text-secondry/70 leading-relaxed">
 								{benefit.description}
 							</p>
 						</motion.div>
@@ -114,18 +114,18 @@ export default function Benefits() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6, delay: 0.8 }}
-					className="mt-[60px] text-center max-w-3xl mx-auto"
+					className="mt-[60px] sm:mt-[40px] xm:mt-[30px] text-center max-w-3xl mx-auto"
 				>
-					<div className="bg-marquee rounded-[20px] p-[40px] border border-secondry/20">
-						<h3 className="text-3xl font-semibold font-FoundersGrotesk text-white		 mb-[15px]">
+					<div className="bg-marquee rounded-[20px] p-[40px] sm:p-[30px] xm:p-[25px] border border-secondry/20">
+						<h3 className="text-3xl sm:text-2xl xm:text-xl font-semibold font-FoundersGrotesk text-white mb-[15px] sm:mb-[12px] xm:mb-[10px]">
 							Ready to Experience These Benefits?
 						</h3>
-						<p className="text-lg font-NeueMontreal text-white mb-[25px]">
+						<p className="text-lg sm:text-base xm:text-sm font-NeueMontreal text-white mb-[25px] sm:mb-[20px] xm:mb-[18px]">
 							Take the first step towards transformation. Book your free discovery call today.
 						</p>
 						<a
 							href="/contact"
-							className="inline-flex items-center gap-[10px] bg-white text-black px-[30px] py-[15px] rounded-full font-semibold font-NeueMontreal hover:bg-secondry/90 transition-colors"
+							className="inline-flex items-center gap-[10px] bg-white text-black px-[30px] py-[15px] sm:px-[25px] sm:py-[12px] xm:px-[20px] xm:py-[10px] rounded-full font-semibold font-NeueMontreal text-base sm:text-sm xm:text-sm hover:bg-secondry/90 transition-colors"
 						>
 							Start Your Journey
 						</a>

@@ -75,7 +75,7 @@ export default function Stats() {
 		<section className="w-full padding-y bg-marquee relative z-20">
 			<div className="padding-x">
 				<div className="max-w-7xl mx-auto">
-					<div className="flex flex-wrap justify-between items-center gap-[60px] lg:gap-[40px] md:gap-[30px] sm:gap-[30px] xm:gap-[25px]">
+					<div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xm:grid-cols-2 gap-[60px] lg:gap-[40px] md:gap-[30px] sm:gap-[30px] xm:gap-[25px]">
 						{stats.map((stat, index) => (
 							<motion.div
 								key={stat.id}
@@ -83,7 +83,7 @@ export default function Stats() {
 								whileInView={{ opacity: 1, scale: 1 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.6, delay: index * 0.1 }}
-								className="flex flex-col items-center flex-1 min-w-[200px]"
+								className="flex flex-col items-center"
 							>
 								<div className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl xm:text-3xl font-bold font-FoundersGrotesk text-white mb-[15px]">
 									<Counter value={parseInt(stat.number)} suffix={stat.suffix} />

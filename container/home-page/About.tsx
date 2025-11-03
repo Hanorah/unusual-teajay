@@ -41,7 +41,7 @@ export default function About() {
 						<dl className="space-y-6 mt-4">
 							<div className="relative pl-9">
 								<dt className="inline font-semibold font-NeueMontreal text-secondry">
-									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#C1FF99" }}>
+									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#0D2818" }}>
 										<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
 									</svg>
 									Personalized Coaching
@@ -50,7 +50,7 @@ export default function About() {
 							</div>
 							<div className="relative pl-9">
 								<dt className="inline font-semibold font-NeueMontreal text-secondry">
-									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#C1FF99" }}>
+									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#0D2818" }}>
 										<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
 									</svg>
 									Holistic Approach
@@ -59,7 +59,7 @@ export default function About() {
 							</div>
 							<div className="relative pl-9">
 								<dt className="inline font-semibold font-NeueMontreal text-secondry">
-									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#C1FF99" }}>
+									<svg viewBox="0 0 20 20" fill="currentColor" className="absolute top-1 left-1 size-5" style={{ color: "#0D2818" }}>
 										<path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
 									</svg>
 									Sustainable Results
