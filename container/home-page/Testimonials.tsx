@@ -63,7 +63,7 @@ export default function Testimonials() {
 				</div>
 
 				{/* Horizontal Scroll Testimonials */}
-				<div className="w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-white/10 pb-[20px]">
+				<div className="w-full overflow-x-auto overflow-y-hidden pb-[20px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 					<div className="flex gap-[30px] lg:gap-[25px] md:gap-[20px] sm:gap-[18px] xm:gap-[16px] min-w-max px-[20px]">
 						{testimonials.map((testimonial) => (
 							<div
