@@ -40,11 +40,11 @@ body {
 		@apply text-[150px] leading-[100px] lg:text-[130px] lg:leading-[98px] md:text-[100px] md:leading-[75px] sm:text-[74px] sm:leading-[50px] xm:text-[64px] xm:leading-[45px];
 	}
 	.sub-heading {
-		@apply text-[55px] leading-[55px] 
-			   lg:text-[40px] lg:leading-[40px] 
-			   md:text-[35px] md:leading-[35px] 
-			   sm:text-[22px] sm:leading-[27px] 
-			   xm:text-[18px] xm:leading-[18px];
+		@apply text-[65px] leading-[65px] 
+			   lg:text-[50px] lg:leading-[50px] 
+			   md:text-[42px] md:leading-[42px] 
+			   sm:text-[28px] sm:leading-[32px] 
+			   xm:text-[24px] xm:leading-[28px];
 	  }
 	  
 	.paragraph {
