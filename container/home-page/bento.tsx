@@ -21,7 +21,7 @@ export function FeaturesSectionDemo() {
           }}
         >
           {/* Large card - Top Left: 2 cols × 2 rows */}
-          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 md:row-span-2 lg:row-span-2 xl:row-span-2 aspect-[4/3] sm:aspect-[9/8] xm:aspect-[9/8] md:aspect-auto lg:aspect-auto xl:aspect-auto">
+          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2 md:row-span-2 lg:row-span-2 xl:row-span-2 aspect-[4/3] sm:aspect-[4/5] xm:aspect-[4/5] md:aspect-auto lg:aspect-auto xl:aspect-auto">
             <div className="absolute inset-0 w-full h-full">
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxmcmllbmRzJTIwY2VsZWJyYXRpbmclMjB0b2dldGhlcnxlbnwwfHx8fDE3MjEwNDMyOTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" 
@@ -43,7 +43,7 @@ export function FeaturesSectionDemo() {
           </div>
 
           {/* Tall card - Top Right: 1 col × 2 rows */}
-          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 md:row-span-2 lg:row-span-2 xl:row-span-2 aspect-[3/4] sm:aspect-[9/8] xm:aspect-[9/8] md:aspect-auto lg:aspect-auto xl:aspect-auto">
+          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 md:row-span-2 lg:row-span-2 xl:row-span-2 aspect-[3/4] sm:aspect-[4/5] xm:aspect-[4/5] md:aspect-auto lg:aspect-auto xl:aspect-auto">
             <div className="absolute inset-0 w-full h-full">
               <img 
                 src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHx3YXRjaCUyMHByb2R1Y3R8ZW58MHwwfHx8MTcyMTA0MzI5Nnww&ixlib=rb-4.0.3&q=80&w=1080" 
@@ -60,7 +60,7 @@ export function FeaturesSectionDemo() {
           </div>
 
           {/* Small card 1 */}
-          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 aspect-square sm:aspect-[9/8] xm:aspect-[9/8] md:aspect-square lg:aspect-square xl:aspect-square">
+          <div className="relative overflow-hidden rounded-[15px] group cursor-pointer sm:col-span-1 xm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 aspect-square sm:aspect-[4/5] xm:aspect-[4/5] md:aspect-square lg:aspect-square xl:aspect-square">
             <div className="absolute inset-0 w-full h-full">
               <img 
                 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwcGhvdG9ncmFwaHl8ZW58MHwwfHx8MTcyMTA0MzI0MXww&ixlib=rb-4.0.3&q=80&w=1080" 
