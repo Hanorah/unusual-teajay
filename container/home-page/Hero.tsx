@@ -93,7 +93,7 @@ export default function Hero() {
 											transition={{ duration: 0.6, delay: 0.4 }}
 											className="text-[72px] lg:text-[64px] md:text-[56px] sm:text-[48px] xm:text-[40px] font-semibold font-FoundersGrotesk text-[#212121] sm:text-white xm:text-white uppercase tracking-[0.05em] leading-[1.1]">
 											I THINK.
-											I CREATE.
+											I CREATE. <br />
 											I SHARE.
 										</motion.h2>
 										<motion.p

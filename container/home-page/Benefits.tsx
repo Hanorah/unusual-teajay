@@ -95,12 +95,12 @@ export default function Benefits() {
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 							className="bg-white border border-[#21212110] rounded-[20px] p-[30px] sm:p-[25px] xm:p-[20px] hover:border-secondry/50 hover:shadow-lg transition-all duration-300 group"
 						>
-							<div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] xm:w-[50px] xm:h-[50px] flex items-center justify-center bg-secondry/10 rounded-[15px] mb-[20px] sm:mb-[15px] xm:mb-[15px] text-secondry group-hover:bg-secondry group-hover:text-background transition-all duration-300">
-								{benefit.icon}
-							</div>
-							<h3 className="text-xl sm:text-lg xm:text-base font-semibold font-FoundersGrotesk text-secondry mb-[12px] sm:mb-[10px] xm:mb-[8px]">
-								{benefit.title}
-							</h3>
+						<div className="w-[60px] h-[60px] sm:w-[50px] sm:h-[50px] xm:w-[50px] xm:h-[50px] flex items-center justify-center bg-secondry/10 rounded-[15px] mb-[20px] sm:mb-[15px] xm:mb-[15px] text-secondry group-hover:bg-secondry group-hover:text-background transition-all duration-300">
+							{benefit.icon}
+						</div>
+						<h3 className="text-2xl sm:text-xl xm:text-lg font-semibold font-FoundersGrotesk text-secondry mb-[12px] sm:mb-[10px] xm:mb-[8px]">
+							{benefit.title}
+						</h3>
 							<p className="text-base sm:text-sm xm:text-sm font-NeueMontreal text-secondry/70 leading-relaxed">
 								{benefit.description}
 							</p>
