@@ -253,7 +253,7 @@ export default function Hero() {
 								</div>
 							</div>
 						</div>
-						<div className="w-full flex items-center justify-between padding-x">
+						<div className="w-full flex items-center justify-between padding-x mb-2">
 							<div className="flex items-center gap-[10px]">
 								{Array.from({ length: totalSlides }).map((_, index) => (
 									<button

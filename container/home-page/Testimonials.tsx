@@ -1,8 +1,6 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { tea } from "@/public";
 
 interface Testimonial {
@@ -52,32 +50,6 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function Testimonials() {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-	useEffect(() => {
-		if (!isAutoPlaying) return;
-		const interval = setInterval(() => {
-			setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isAutoPlaying]);
-
-	const nextTestimonial = () => {
-		setIsAutoPlaying(false);
-		setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-	};
-
-	const prevTestimonial = () => {
-		setIsAutoPlaying(false);
-		setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-	};
-
-	const goToTestimonial = (index: number) => {
-		setIsAutoPlaying(false);
-		setCurrentIndex(index);
-	};
-
 	return (
 		<section className="w-full padding-y bg-marquee relative z-20">
 			<div className="padding-x">
@@ -90,114 +62,39 @@ export default function Testimonials() {
 					</p>
 				</div>
 
-				{/* Main Testimonial Display */}
-				<div className="relative max-w-5xl mx-auto mb-[40px]">
-					<div className="relative overflow-hidden rounded-[20px] bg-white/10 backdrop-blur-sm border border-white/20 p-[50px] lg:p-[40px] md:p-[30px] sm:p-[25px] xm:p-[20px]">
-						<AnimatePresence mode="wait">
-							<motion.div
-								key={currentIndex}
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -20 }}
-								transition={{ duration: 0.4 }}
-								className="text-center"
+				{/* Horizontal Scroll Testimonials */}
+				<div className="w-full overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-white/10 pb-[20px]">
+					<div className="flex gap-[30px] lg:gap-[25px] md:gap-[20px] sm:gap-[18px] xm:gap-[16px] min-w-max px-[20px]">
+						{testimonials.map((testimonial) => (
+							<div
+								key={testimonial.id}
+								className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-[20px] p-[40px] lg:p-[35px] md:p-[30px] sm:p-[25px] xm:p-[20px] hover:bg-white/20 transition-all w-[450px] lg:w-[400px] md:w-[350px] sm:w-[320px] xm:w-[300px] flex-shrink-0"
 							>
 								{/* Stars */}
-								<div className="flex justify-center gap-[5px] mb-[25px]">
-									{Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
-										<Star key={i} size={24} fill="#FFD700" stroke="#FFD700" className="text-yellow-400" />
+								<div className="flex gap-[5px] mb-[20px]">
+									{Array.from({ length: testimonial.rating }).map((_, i) => (
+										<Star key={i} size={20} fill="#FFD700" stroke="#FFD700" />
 									))}
 								</div>
 
 								{/* Testimonial Text */}
-								<blockquote className="text-2xl lg:text-xl md:text-lg sm:text-base font-NeueMontreal text-white leading-relaxed mb-[30px] font-medium">
-									"{testimonials[currentIndex].text}"
+								<blockquote className="text-lg font-NeueMontreal text-white/90 mb-[25px] leading-relaxed">
+									"{testimonial.text}"
 								</blockquote>
 
 								{/* Author Info */}
-								<div className="flex flex-col items-center gap-[15px]">
-									<div className="relative w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white">
-										<Image
-											src={tea}
-											alt={testimonials[currentIndex].name}
-											fill
-											className="object-cover"
-										/>
+								<div className="flex items-center gap-[15px]">
+									<div className="relative w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-white/30 flex-shrink-0">
+										<Image src={tea} alt={testimonial.name} fill className="object-cover" />
 									</div>
 									<div>
-										<h4 className="text-xl font-semibold font-NeueMontreal text-white">
-											{testimonials[currentIndex].name}
-										</h4>
-										<p className="text-base font-NeueMontreal text-white/80">
-											{testimonials[currentIndex].role}
-										</p>
+										<h5 className="text-lg font-semibold font-NeueMontreal text-white">{testimonial.name}</h5>
+										<p className="text-sm font-NeueMontreal text-white/80">{testimonial.role}</p>
 									</div>
 								</div>
-							</motion.div>
-						</AnimatePresence>
-
-						{/* Navigation Arrows */}
-						<button
-							onClick={prevTestimonial}
-							className="absolute left-[20px] top-1/2 -translate-y-1/2 w-[50px] h-[50px] flex items-center justify-center border border-white/30 rounded-full hover:bg-white transition-all transform duration-300 group cursor-pointer bg-white/10 backdrop-blur-sm shadow-lg"
-							aria-label="Previous testimonial"
-						>
-							<ChevronLeft size={24} className="text-white group-hover:text-secondry transition-colors" />
-						</button>
-						<button
-							onClick={nextTestimonial}
-							className="absolute right-[20px] top-1/2 -translate-y-1/2 w-[50px] h-[50px] flex items-center justify-center border border-white/30 rounded-full hover:bg-white transition-all transform duration-300 group cursor-pointer bg-white/10 backdrop-blur-sm shadow-lg"
-							aria-label="Next testimonial"
-						>
-							<ChevronRight size={24} className="text-white group-hover:text-secondry transition-colors" />
-						</button>
+							</div>
+						))}
 					</div>
-				</div>
-
-				{/* Dots Indicator */}
-				<div className="flex justify-center items-center gap-[10px] mb-[50px]">
-					{testimonials.map((_, index) => (
-						<button
-							key={index}
-							onClick={() => goToTestimonial(index)}
-							className={`h-[10px] rounded-full transition-all duration-300 ${
-								currentIndex === index ? "bg-white w-[30px]" : "bg-white/40 w-[10px]"
-							}`}
-							aria-label={`Go to testimonial ${index + 1}`}
-						/>
-					))}
-				</div>
-
-				{/* Additional Testimonials Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] max-w-6xl mx-auto">
-					{testimonials.slice(0, 3).map((testimonial, index) => (
-						<motion.div
-							key={testimonial.id}
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
-							className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-[15px] p-[30px] hover:bg-white/20 transition-all"
-						>
-							<div className="flex gap-[5px] mb-[20px]">
-								{Array.from({ length: testimonial.rating }).map((_, i) => (
-									<Star key={i} size={18} fill="#FFD700" stroke="#FFD700" />
-								))}
-							</div>
-							<p className="text-base font-NeueMontreal text-white/90 mb-[20px] leading-relaxed line-clamp-4">
-								"{testimonial.text}"
-							</p>
-							<div className="flex items-center gap-[15px]">
-								<div className="relative w-[50px] h-[50px] rounded-full overflow-hidden border border-white/30">
-									<Image src={tea} alt={testimonial.name} fill className="object-cover" />
-								</div>
-								<div>
-									<h5 className="font-semibold font-NeueMontreal text-white">{testimonial.name}</h5>
-									<p className="text-sm font-NeueMontreal text-white/80">{testimonial.role}</p>
-								</div>
-							</div>
-						</motion.div>
-					))}
 				</div>
 			</div>
 		</section>
