@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import { Star } from "lucide-react";
-import { tea } from "@/public";
+import Avatar from "@/components/Avatar";
 
 interface Testimonial {
 	id: number;
@@ -84,8 +83,8 @@ export default function Testimonials() {
 
 								{/* Author Info */}
 								<div className="flex items-center gap-[15px]">
-									<div className="relative w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-white/30 flex-shrink-0">
-										<Image src={tea} alt={testimonial.name} fill className="object-cover" />
+									<div className="flex-shrink-0 border-2 border-white/30 rounded-full overflow-hidden">
+										<Avatar name={testimonial.name} size={60} />
 									</div>
 									<div>
 										<h5 className="text-lg font-semibold font-NeueMontreal text-white">{testimonial.name}</h5>

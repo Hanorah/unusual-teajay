@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { ochiside,  showcase1, tea } from "@/public";
+import { first, second, tea } from "@/public";
 
 export default function Hero() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -76,10 +76,10 @@ export default function Hero() {
 											transition={{ duration: 0.6, delay: 0.3 }}
 											className="relative w-full h-full">
 											<Image
-												src={tea}
+												src={first}
 												alt="Life Coach"
 												fill
-												className="object-cover object-top rounded-[0px]"
+												className="object-cover object-top center rounded-[0px]"
 												priority
 											/>
 											{/* Overlay for mobile */}
@@ -149,7 +149,7 @@ export default function Hero() {
 											transition={{ duration: 0.6, delay: 0.3 }}
 											className="relative w-full h-full">
 											<Image
-												src={tea}
+												src={second}
 												alt="Life Coach"
 												fill
 												className="object-cover object-top rounded-[0px]"
