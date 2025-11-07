@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { Curve, Marquee } from "@/components";
-import { About, Hero, Testimonials, Services, Process, Stats, Benefits, Contact, Workbook } from "@/container";
+import { About, AboutCoach, Hero, Testimonials, Services, Process, Stats, Benefits, Contact, Workbook } from "@/container";
 
 import { FeaturesSectionDemo } from "@/container/home-page/bento";
 
@@ -25,6 +25,7 @@ export default function Home() {
 					/>
 				</div>
 				<About />
+				<AboutCoach />
 				<Stats />
 				<Benefits />
 				<Services />
