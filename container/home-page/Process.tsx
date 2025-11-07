@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Search, Target, Rocket, CheckCircle, ArrowRight } from "lucide-react";
+import { getWhatsAppLink } from "@/constants";
 
 interface Step {
 	id: number;
@@ -116,10 +117,12 @@ export default function Process() {
 					<p className="text-xl font-medium font-NeueMontreal text-secondry mb-[25px]">
 						Ready to start your transformation journey?
 					</p>
-					<a
-						href="/contact"
-						className="inline-flex items-center gap-[10px] bg-secondry text-background px-[30px] py-[15px] rounded-full font-semibold font-NeueMontreal hover:bg-secondry/90 transition-colors"
-					>
+				<a
+					href={getWhatsAppLink("Hi! I'd love to begin with a free discovery call.")}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-[10px] bg-secondry text-background px-[30px] py-[15px] rounded-full font-semibold font-NeueMontreal hover:bg-secondry/90 transition-colors"
+				>
 						Begin with a Free Discovery Call
 						<ArrowRight size={20} />
 					</a>

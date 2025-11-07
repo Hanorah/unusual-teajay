@@ -1,4 +1,5 @@
 // Icons replaced with inline SVGs
+import { getWhatsAppLink } from "@/constants";
 
 export const CTA1 = () => (
   <div className="w-full py-8 lg:py-12 bg-marquee">
@@ -19,7 +20,7 @@ export const CTA1 = () => (
         </div>
         <div className="flex flex-row gap-4">
           <a 
-            href="https://selar.com/livingandageingbook"
+            href={getWhatsAppLink("Hi! I'm interested in getting the Living and Ageing book.")}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-md font-medium flex items-center gap-4"

@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send, Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Send, Mail, Phone, Clock } from "lucide-react";
+import { getWhatsAppLink } from "@/constants";
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -23,20 +24,30 @@ export default function Contact() {
 		});
 	};
 
-	const handleSubmit = async (e: React.FormEvent) => {
+	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		setSubmitStatus("idle");
 
-		// Simulate form submission
-		setTimeout(() => {
-			setIsSubmitting(false);
-			setSubmitStatus("success");
-			setFormData({ name: "", email: "", phone: "", message: "" });
-			
-			// Reset success message after 5 seconds
-			setTimeout(() => setSubmitStatus("idle"), 5000);
-		}, 1500);
+		const messageLines = [
+			"Hi! I'd love to learn more about your coaching services.",
+			`Name: ${formData.name}`,
+			`Email: ${formData.email}`,
+			formData.phone ? `Phone: ${formData.phone}` : "",
+			`Message: ${formData.message}`,
+		].filter(Boolean);
+
+		const whatsappUrl = getWhatsAppLink(messageLines.join("\n"));
+
+		if (typeof window !== "undefined") {
+			window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+		}
+
+		setIsSubmitting(false);
+		setSubmitStatus("success");
+		setFormData({ name: "", email: "", phone: "", message: "" });
+
+		setTimeout(() => setSubmitStatus("idle"), 5000);
 	};
 
 	return (

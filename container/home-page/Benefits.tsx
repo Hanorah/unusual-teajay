@@ -12,6 +12,7 @@ import {
 	CheckCircle,
 	Sparkles,
 } from "lucide-react";
+import { getWhatsAppLink } from "@/constants";
 
 interface Benefit {
 	id: number;
@@ -123,10 +124,12 @@ export default function Benefits() {
 						<p className="text-lg sm:text-base xm:text-sm font-NeueMontreal text-white mb-[25px] sm:mb-[20px] xm:mb-[18px]">
 							Take the first step towards transformation. Book your free discovery call today.
 						</p>
-						<a
-							href="/contact"
-							className="inline-flex items-center gap-[10px] bg-white text-black px-[30px] py-[15px] sm:px-[25px] sm:py-[12px] xm:px-[20px] xm:py-[10px] rounded-full font-semibold font-NeueMontreal text-base sm:text-sm xm:text-sm hover:bg-secondry/90 transition-colors"
-						>
+					<a
+						href={getWhatsAppLink("Hi! I'm ready to experience these coaching benefits.")}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-[10px] bg-white text-black px-[30px] py-[15px] sm:px-[25px] sm:py-[12px] xm:px-[20px] xm:py-[10px] rounded-full font-semibold font-NeueMontreal text-base sm:text-sm xm:text-sm hover:bg-secondry/90 transition-colors"
+					>
 							Start Your Journey
 						</a>
 					</div>

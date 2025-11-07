@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Check, ArrowRight, Sparkles, Target, Heart, Users, BookOpen } from "lucide-react";
+import { getWhatsAppLink } from "@/constants";
 
 interface Service {
 	id: number;
@@ -134,7 +135,7 @@ export default function Services() {
 
 								{/* CTA Button */}
 								<a
-									href={`https://wa.me/2348023401104?text=${encodeURIComponent(`Hi I would like to purchase a coaching plan - ${service.title}`)}`}
+									href={getWhatsAppLink(`Hi! I would like to purchase the ${service.title}.`)}
 									target="_blank"
 									rel="noopener noreferrer"
 									className={`w-full py-[15px] px-[25px] rounded-full font-medium font-NeueMontreal text-center transition-all duration-300 flex items-center justify-center gap-[10px] ${
@@ -157,7 +158,7 @@ export default function Services() {
 						All packages include a free 30-minute discovery call to ensure we're the right fit for your journey.
 					</p>
 					<Link
-						href="/contact"
+						href="#contact"
 						className="inline-flex items-center gap-[10px] text-base font-semibold font-NeueMontreal text-white hover:text-secondry/80 transition-colors"
 					>
 						Book Your Free Discovery Call

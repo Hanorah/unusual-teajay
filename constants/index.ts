@@ -1,4 +1,9 @@
 
+export const WHATSAPP_NUMBER = "2348023401104";
+
+export const getWhatsAppLink = (message: string) =>
+   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 // Navbar
 export const navbarItems = [
    {
@@ -70,7 +75,7 @@ export const footerItems = [
    {
       id: 6,
       title: "Whatsapp",
-      href: "https://wa.me/+2345678910",
+      href: getWhatsAppLink("Hi! I'd love to connect with you on WhatsApp."),
       img: "/whatsapp.png",
    },
 ];

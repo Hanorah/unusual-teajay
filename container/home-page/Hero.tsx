@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { first, second, tea } from "@/public";
+import { getWhatsAppLink } from "@/constants";
 
 export default function Hero() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -107,9 +108,11 @@ export default function Hero() {
 											transition={{ duration: 0.6, delay: 0.6 }}
 											className="flex items-center gap-[5px] group mt-[10px] sm:hidden xm:hidden">
 											<div className="rounded-[50px] border border-[#21212199] sm:border-white/80 xm:border-white/80 group-hover:bg-secondry sm:group-hover:bg-white xm:group-hover:bg-white py-[3px] px-[12px] cursor-pointer">
-												<Link
-													className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
-													href="/contact">
+									<Link
+										className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
+										href={getWhatsAppLink("Hi! I'd like to book a coaching session.")}
+										target="_blank"
+										rel="noopener noreferrer">
 													Book a Session
 												</Link>
 											</div>
@@ -180,9 +183,11 @@ export default function Hero() {
 											transition={{ duration: 0.6, delay: 0.6 }}
 											className="flex items-center gap-[5px] group mt-[10px] sm:hidden xm:hidden">
 											<div className="rounded-[50px] border border-[#21212199] sm:border-white/80 xm:border-white/80 group-hover:bg-secondry sm:group-hover:bg-white xm:group-hover:bg-white py-[3px] px-[12px] cursor-pointer">
-												<Link
-													className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
-													href="/contact">
+									<Link
+										className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
+										href={getWhatsAppLink("Hi! I'm ready to start my coaching journey.")}
+										target="_blank"
+										rel="noopener noreferrer">
 													Start Your Journey
 												</Link>
 											</div>
@@ -236,9 +241,9 @@ export default function Hero() {
 								</div>
 								<div className="flex items-center gap-[5px] group">
 									<div className="rounded-[50px] border border-[#21212199] group-hover:bg-secondry  py-[3px] px-[12px] cursor-pointer">
-										<Link
-											className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all  transform duration-[0.3s] ease-[.215,.61,.355,1]"
-											href="/contact">
+									<Link
+										className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all  transform duration-[0.3s] ease-[.215,.61,.355,1]"
+										href="#contact">
 											Book Your Session
 										</Link>
 									</div>

@@ -72,8 +72,8 @@ export default function About() {
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}
 					>
-						<RoundButton
-							href="/About-us"
+					<RoundButton
+						href="#services"
 							title="learn more"
 							bgcolor="#000"
 							className="bg-white text-black"
