@@ -24,6 +24,11 @@ export const navbarItems = [
    },
    {
       id: 5,
+      title: "Workbook",
+      href: "#workbook",
+   },
+   {
+      id: 6,
       title: "Contact",
       href: "#contact",
    },
@@ -99,6 +104,11 @@ export const footernavbarItems = [
    },
    {
       id: 6,
+      title: "Workbook",
+      href: "#workbook",
+   },
+   {
+      id: 7,
       title: "Contact",
       href: "#contact",
    },

@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, WorkbookPopup } from "@/components";
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 
@@ -46,6 +46,7 @@ export default function App({
 				<Component key={router.route} {...pageProps} />
 			</AnimatePresence>
 			<Footer />
+			<WorkbookPopup />
 		</>
 	);
 }

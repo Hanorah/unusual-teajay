@@ -7,3 +7,4 @@ export { default as Process } from "./home-page/Process";
 export { default as Stats } from "./home-page/Stats";
 export { default as Benefits } from "./home-page/Benefits";
 export { default as Contact } from "./home-page/Contact";
+export { default as Workbook } from "./home-page/Workbook";

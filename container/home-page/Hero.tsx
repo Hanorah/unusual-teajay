@@ -45,13 +45,13 @@ export default function Hero() {
 
 	return (
 		<section
-			className="w-full h-screen sm:mb-[-10px] xm:mb-[-10px] relative overflow-hidden"
+			className="w-full h-screen sm:mb-[-10px] xm:mb-[-10px] md:h-auto md:min-h-screen relative overflow-hidden"
 			data-scroll
 			data-scroll-speed="-.3">
 			<div className="w-full h-full flex flex-col justify-between">
-				<div className="w-full flex flex-col justify-between h-[92vh] sm:h-[95vh] xm:h-[95vh] relative">
+				<div className="w-full flex flex-col justify-between h-[92vh] sm:h-[95vh] xm:h-[95vh] md:h-[92vh] relative">
 					{/* Green Background - Full Left Side */}
-					<div className="absolute left-0 top-0 w-[50%] h-full  -mt-[8vh] pt-[8vh] z-0"></div>
+					<div className="absolute left-0 top-0 w-[50%] md:w-[50%] sm:w-full xm:w-full h-full -mt-[8vh] pt-[8vh] z-0"></div>
 					{/* Carousel Container */}
 					<div className="w-full flex justify-between gap-[20px] relative h-full z-10">
 						<AnimatePresence initial={false} custom={direction} mode="wait">
@@ -68,40 +68,38 @@ export default function Hero() {
 										x: { type: "spring", stiffness: 300, damping: 30 },
 										opacity: { duration: 0.2 },
 									}}
-									className="w-full flex justify-between items-start gap-[20px] absolute inset-0 pt-0 sm:flex-col xm:flex-col">
-									<div className="w-[50%] sm:w-full xm:w-full flex justify-start items-start h-full relative">
+									className="w-full flex justify-between items-start gap-[20px] absolute inset-0 pt-0 sm:flex-col xm:flex-col md:flex-row">
+									<div className="w-[50%] md:w-[50%] sm:w-full xm:w-full flex justify-start items-start h-full relative">
 										<motion.div
 											initial={{ opacity: 0, scale: 0.9 }}
 											animate={{ opacity: 1, scale: 1 }}
 											transition={{ duration: 0.6, delay: 0.3 }}
 											className="relative w-full h-full">
 											<Image
-												src={first}
+												src={second}
 												alt="Life Coach"
 												fill
-												className="object-cover object-top center rounded-[0px]"
+												className="object-cover object-top rounded-[0px]"
 												priority
 											/>
 											{/* Overlay for mobile */}
-											<div className="absolute inset-0 bg-black/40 sm:block xm:block hidden"></div>
+											<div className="absolute inset-0 bg-black/40 sm:block xm:block md:hidden"></div>
 										</motion.div>
 									</div>
-									<div className="w-[50%] sm:w-full xm:w-full sm:absolute xm:absolute sm:inset-0 xm:inset-0 sm:z-20 xm:z-20 sm:flex xm:flex sm:flex-col xm:flex-col sm:justify-end xm:justify-end sm:pb-[40px] xm:pb-[40px] flex flex-col justify-start gap-[20px] pt-[12vh] sm:pt-0 xm:pt-0 padding-x">
+									<div className="w-[50%] md:w-[50%] sm:w-full xm:w-full sm:absolute xm:absolute sm:inset-0 xm:inset-0 sm:z-20 xm:z-20 sm:flex xm:flex sm:flex-col xm:flex-col sm:justify-end xm:justify-end sm:pb-[40px] xm:pb-[40px] flex flex-col justify-start gap-[20px] pt-[12vh] md:pt-[8vh] sm:pt-0 xm:pt-0 padding-x">
 										<motion.h2
 											initial={{ opacity: 0, y: 20 }}
 											animate={{ opacity: 1, y: 0 }}
 											transition={{ duration: 0.6, delay: 0.4 }}
-											className="text-[72px] lg:text-[64px] md:text-[56px] sm:text-[48px] xm:text-[40px] font-semibold font-FoundersGrotesk text-[#212121] sm:text-white xm:text-white uppercase tracking-[0.05em] leading-[1.1]">
-											I THINK.
-											I CREATE. <br />
-											I SHARE.
+											className="text-[72px] lg:text-[64px] md:text-[52px] sm:text-[48px] xm:text-[40px] font-semibold font-FoundersGrotesk text-[#212121] md:text-[#212121] sm:text-white xm:text-white uppercase tracking-[0.05em] leading-[1.1]">
+											Transform Your Life Journey
 										</motion.h2>
 										<motion.p
 											initial={{ opacity: 0, y: 20 }}
 											animate={{ opacity: 1, y: 0 }}
 											transition={{ duration: 0.6, delay: 0.5 }}
-											className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white max-w-[520px] text-[20px] leading-[32px] lg:text-[18px] lg:leading-[28px]">
-											Empowering you to transform your mindset, create meaningful change, and share your journey with confidence. Through personalized coaching, we help you break through limiting beliefs, develop powerful strategies for growth, and build the resilience needed to achieve your dreams.
+											className="paragraph font-NeueMontreal text-secondry md:text-secondry sm:text-white xm:text-white max-w-[520px] md:max-w-[450px] text-[20px] leading-[32px] lg:text-[18px] lg:leading-[28px] md:text-[16px] md:leading-[24px]">
+											Experience personalized coaching that helps you overcome obstacles, set meaningful goals, and achieve the life you've always envisioned. Your transformation starts here, where possibility meets purpose.
 										</motion.p>
 										<motion.div
 											initial={{ opacity: 0, y: 20 }}
@@ -112,7 +110,7 @@ export default function Hero() {
 												<Link
 													className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
 													href="/contact">
-													Start Your Journey
+													Book a Session
 												</Link>
 											</div>
 											<div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212199] sm:border-white/80 xm:border-white/80 rounded-full p-[1px] group-hover:bg-secondry sm:group-hover:bg-white xm:group-hover:bg-white transition-all transform duration-[0.3s] ease-[.215,.61,.355,1] cursor-pointer xm:hidden sm:hidden">
@@ -141,38 +139,40 @@ export default function Hero() {
 										x: { type: "spring", stiffness: 300, damping: 30 },
 										opacity: { duration: 0.2 },
 									}}
-									className="w-full flex justify-between items-start gap-[20px] absolute inset-0 pt-0 sm:flex-col xm:flex-col">
-									<div className="w-[50%] sm:w-full xm:w-full flex justify-start items-start h-full relative">
+									className="w-full flex justify-between items-start gap-[20px] absolute inset-0 pt-0 sm:flex-col xm:flex-col md:flex-row">
+									<div className="w-[50%] md:w-[50%] sm:w-full xm:w-full flex justify-start items-start h-full relative">
 										<motion.div
 											initial={{ opacity: 0, scale: 0.9 }}
 											animate={{ opacity: 1, scale: 1 }}
 											transition={{ duration: 0.6, delay: 0.3 }}
 											className="relative w-full h-full">
 											<Image
-												src={second}
+												src={first}
 												alt="Life Coach"
 												fill
-												className="object-cover object-top rounded-[0px]"
+												className="object-cover object-top center rounded-[0px]"
 												priority
 											/>
 											{/* Overlay for mobile */}
-											<div className="absolute inset-0 bg-black/40 sm:block xm:block hidden"></div>
+											<div className="absolute inset-0 bg-black/40 sm:block xm:block md:hidden"></div>
 										</motion.div>
 									</div>
-									<div className="w-[50%] sm:w-full xm:w-full sm:absolute xm:absolute sm:inset-0 xm:inset-0 sm:z-20 xm:z-20 sm:flex xm:flex sm:flex-col xm:flex-col sm:justify-end xm:justify-end sm:pb-[40px] xm:pb-[40px] flex flex-col justify-start gap-[20px] pt-[12vh] sm:pt-0 xm:pt-0 padding-x">
+									<div className="w-[50%] md:w-[50%] sm:w-full xm:w-full sm:absolute xm:absolute sm:inset-0 xm:inset-0 sm:z-20 xm:z-20 sm:flex xm:flex sm:flex-col xm:flex-col sm:justify-end xm:justify-end sm:pb-[40px] xm:pb-[40px] flex flex-col justify-start gap-[20px] pt-[12vh] md:pt-[8vh] sm:pt-0 xm:pt-0 padding-x">
 										<motion.h2
 											initial={{ opacity: 0, y: 20 }}
 											animate={{ opacity: 1, y: 0 }}
 											transition={{ duration: 0.6, delay: 0.4 }}
-											className="text-[72px] lg:text-[64px] md:text-[56px] sm:text-[48px] xm:text-[40px] font-semibold font-FoundersGrotesk text-[#212121] sm:text-white xm:text-white uppercase tracking-[0.05em] leading-[1.1]">
-											Transform Your Life Journey
+											className="text-[72px] lg:text-[64px] md:text-[52px] sm:text-[48px] xm:text-[40px] font-semibold font-FoundersGrotesk text-[#212121] md:text-[#212121] sm:text-white xm:text-white uppercase tracking-[0.05em] leading-[1.1]">
+											I THINK.
+											I CREATE. <br />
+											I SHARE.
 										</motion.h2>
 										<motion.p
 											initial={{ opacity: 0, y: 20 }}
 											animate={{ opacity: 1, y: 0 }}
 											transition={{ duration: 0.6, delay: 0.5 }}
-											className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white max-w-[520px] text-[20px] leading-[32px] lg:text-[18px] lg:leading-[28px]">
-											Experience personalized coaching that helps you overcome obstacles, set meaningful goals, and achieve the life you've always envisioned. Your transformation starts here, where possibility meets purpose.
+											className="paragraph font-NeueMontreal text-secondry md:text-secondry sm:text-white xm:text-white max-w-[520px] md:max-w-[450px] text-[20px] leading-[32px] lg:text-[18px] lg:leading-[28px] md:text-[16px] md:leading-[24px]">
+											Empowering you to transform your mindset, create meaningful change, and share your journey with confidence. Through personalized coaching, we help you break through limiting beliefs, develop powerful strategies for growth, and build the resilience needed to achieve your dreams.
 										</motion.p>
 										<motion.div
 											initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export default function Hero() {
 												<Link
 													className="paragraph font-NeueMontreal text-secondry sm:text-white xm:text-white sm:group-hover:text-[#212121] xm:group-hover:text-[#212121] uppercase group-hover:text-background transition-all transform duration-[0.3s] ease-[.215,.61,.355,1]"
 													href="/contact">
-													Book a Session
+													Start Your Journey
 												</Link>
 											</div>
 											<div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212199] sm:border-white/80 xm:border-white/80 rounded-full p-[1px] group-hover:bg-secondry sm:group-hover:bg-white xm:group-hover:bg-white transition-all transform duration-[0.3s] ease-[.215,.61,.355,1] cursor-pointer xm:hidden sm:hidden">
@@ -201,7 +201,7 @@ export default function Hero() {
 						</AnimatePresence>
 
 						{/* Navigation Arrows */}
-						<div className="absolute right-[50px] md:right-[30px] sm:right-[20px] xm:right-[20px] top-1/2 -translate-y-1/2 flex flex-col gap-[10px] z-10">
+						<div className="absolute right-[50px] md:right-[30px] sm:right-[20px] xm:right-[20px] top-1/2 -translate-y-1/2 flex flex-col gap-[10px] z-10 sm:z-30 xm:z-30">
 							<button
 								onClick={prevSlide}
 								className="w-[40px] h-[40px] flex items-center justify-center border border-[#21212199] rounded-full hover:bg-secondry transition-all transform duration-[0.3s] ease-[.215,.61,.355,1] group cursor-pointer">
