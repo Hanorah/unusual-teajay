@@ -133,8 +133,10 @@ export default function Services() {
 								</ul>
 
 								{/* CTA Button */}
-								<Link
-									href="/contact"
+								<a
+									href={`https://wa.me/2348023401104?text=${encodeURIComponent(`Hi I would like to purchase a coaching plan - ${service.title}`)}`}
+									target="_blank"
+									rel="noopener noreferrer"
 									className={`w-full py-[15px] px-[25px] rounded-full font-medium font-NeueMontreal text-center transition-all duration-300 flex items-center justify-center gap-[10px] ${
 										service.popular
 											? "bg-secondry text-background hover:bg-secondry/90"
@@ -143,7 +145,7 @@ export default function Services() {
 								>
 									Get Started
 									<ArrowRight size={18} />
-								</Link>
+								</a>
 							</div>
 						</motion.div>
 					))}
